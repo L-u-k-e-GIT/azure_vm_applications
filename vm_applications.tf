@@ -12,7 +12,7 @@ terraform {
 resource "azapi_update_resource" "vm_applications_sccm" {
   type      = "Microsoft.Compute/virtualMachines@2021-11-01"   //API version to use
   name      = var.MD_VIRTUAL_MACHINE_NAME // virtual machine name 
-  parent_id = var.MD_RG_NAME
+  parent_id = var.MD_RG_NAME // Resourse Group Name
 
   body = jsonencode({
     
@@ -21,7 +21,7 @@ resource "azapi_update_resource" "vm_applications_sccm" {
       "galleryApplications": [
         {
           "order": 1,
-          "packageReferenceId": "${var.MD_VM_APP_ID} " ,
+          "packageReferenceId": "${var.MD_VM_APP_ID} " ,  // ID of VM Applications
          
         }
       ]
