@@ -1,4 +1,4 @@
-<p><strong># module_vm_applications</strong><br />module to install vm appllications on azure</p>
+<p><strong># module_vm_applications</strong><br />module to install vm appllications on azure with terraform</p>
 <p><br />This Terraform Module allow to install vm applications (preview on azure) on a virtual machine.</p>
 <p>Use AzApi provider as this functionality is in previee</p>
 <p>The functionalaity is described here:<br /><span style="text-decoration: underline;">https://docs.microsoft.com/en-us/azure/virtual-machines/vm-applications-how-to?tabs=portal</span></p>
@@ -33,8 +33,12 @@
 <p>example of module calling:</p>
 <div style="color: #d4d4d4; background-color: #1e1e1e; font-family: Consolas, 'Courier New', monospace; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
 <div><span style="color: #4ec9b0;">module</span> <span style="color: #4fc1ff;">"vm_applications_sccm"</span><span style="color: #d4d4d4;"> {</span></div>
-<div><span style="color: #d4d4d4;">&nbsp; </span><span style="color: #9cdcfe;">source</span> <span style="color: #d4d4d4;">=</span> <span style="color: #ce9178;">"./modules/vm_applications"</span></div>
-<div>&nbsp;</div>
+<div><span style="color: #d4d4d4;"> #</span><span style="color: #9cdcfe;">source</span> <span style="color: #d4d4d4;">=</span> <span style="color: #ce9178;">"./modules/vm_applications"</span></div>
+<div>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: Consolas, 'Courier New', monospace; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #9cdcfe;">source</span> <span style="color: #d4d4d4;">=</span> <span style="color: #ce9178;">"git::https://github.com/L-u-k-e-GIT/module_vm_applications.git"</span></div>
+</div>
+</div>
 <div><span style="color: #d4d4d4;">&nbsp; </span><span style="color: #9cdcfe;">MD_RG_NAME</span><span style="color: #9cdcfe;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="color: #d4d4d4;">=</span> <span style="color: #9cdcfe;">azurerm_resource_group</span><span style="color: #d4d4d4;">.</span><span style="color: #9cdcfe;">rg</span><span style="color: #d4d4d4;">.</span><span style="color: #9cdcfe;">id</span><span style="color: #d4d4d4;"> &nbsp; &nbsp; </span></div>
 <div><span style="color: #d4d4d4;">&nbsp; </span><span style="color: #9cdcfe;">MD_VIRTUAL_MACHINE_NAME</span><span style="color: #9cdcfe;"> &nbsp; &nbsp; </span><span style="color: #d4d4d4;">=</span> <span style="color: #d4d4d4;">each.</span><span style="color: #9cdcfe;">value</span><span style="color: #d4d4d4;">.</span><span style="color: #9cdcfe;">name</span></div>
 <div><span style="color: #d4d4d4;">&nbsp; </span><span style="color: #9cdcfe;">MD_VM_APP_ID</span><span style="color: #9cdcfe;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color: #d4d4d4;">=</span> <span style="color: #9cdcfe;">var</span><span style="color: #d4d4d4;">.</span><span style="color: #9cdcfe;">VM_APP_ID</span></div>
