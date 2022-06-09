@@ -21,7 +21,7 @@ resource "azapi_update_resource" "vm_applications_sccm" {
       "galleryApplications": [
         {
           "order": 1,
-          "packageReferenceId": "${var.MD_VM_APP_ID} " ,  // ID of VM Applications
+          "packageReferenceId": "${var.MD_VM_APP_ID}" ,  // ID of VM Applications
          
         }
       ]
