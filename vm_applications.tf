@@ -31,4 +31,3 @@ resource "azapi_update_resource" "vm_applications_sccm" {
   }
   )
 }
-      
