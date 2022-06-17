@@ -1,7 +1,7 @@
 variable "MD_RUN"  { 
  description = "ID of Vm Application"
  type = number
- default = ""
+ default = "0"
 }
 
 

@@ -6,7 +6,7 @@ terraform {
       version = "~>0.1"
     }
   }
-}
+} 
 
 
 resource "azapi_update_resource" "vm_applications_sccm" {
